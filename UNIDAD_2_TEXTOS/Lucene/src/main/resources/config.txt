@@ -1,0 +1,1 @@
+prefixDir=C:\\Users\\54223\\ITBA\\2A_2Q\\EDA\\UNIDAD_2_TEXTOS\\Lucene

@@ -1,0 +1,5 @@
+*.MP4
+*.docx
+*.doc
+/target/
+/bin/
