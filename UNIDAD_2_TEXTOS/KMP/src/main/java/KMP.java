@@ -1,13 +1,49 @@
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+
+/* (INDEX OF QUE DEVUELVE LA PRIMERA APARCION)
+ O(N*M) TEMPORAL
+ O(1) ESPACIAL
+ NAIVE
+public static int indexOf(char[] query, char[] target)
+{
+    int idxTarget= 0;
+    int idxQuery 0;
+    while(idxTarget < target.length && idxQuery < query.length) {
+       if (query[idxQuery] == target[idxTarget]) {
+        idxQuery++;
+        idxTarget++;
+        if (idxQuery == query.length)
+        return idxTarget-idxQuery;
+        }
+       else {
+        idxTarget= idxTarget - idxQuery + 1; //esto es equivalente a sumarle unicamente 1 al idx target;
+        idxQuery = 0;         //no encontre reinicializo el contador.
+        }
+        }
+        return -1;
+        }
+ */
+
 public class KMP {
+
+    //O(N) ESPACIAL Y TEMPORAL
+
+    /*
+    NEXT: Armo un array de la longitud del Query. voy iterando por las subcadenas de la query(osea i++)
+    y en estas subcadenas me fijo cual es el prefijo que es sufijo en ese substring (propios)y tomo la
+    longitud del mas largo. NEXT[0] =0 En NEXT[i] va a estar la longitud del prefijo y
+    sufijo mas largo del substring de longitud i+1 de la query.
+    */
+
 
     private static int[] nextComputation1(char[] query) {
         int[] next = new int[query.length];
 
-        int border=0;  // Length of the current border
+        int border=0;  // Length of the current border (LONGITUD PREFIJO Y SUFIJO IGUALES MAS LARGO)
 
         int rec=1;
         while(rec < query.length){
@@ -27,6 +63,7 @@ public class KMP {
     }
 
 
+
     private static int[] nextComputation2(char[] query) {
         int[] next = new int[query.length];
         next[0] = 0;     // Always. There's no proper border.
@@ -42,6 +79,9 @@ public class KMP {
         return next;
     }
 
+
+    //O(N + M) // (EL M ES DEL LPS, EL N DE RECORRER EL ARRAY)
+    //O(M) ESPACIAL (ARRAY LPS)
 
     public static int indexOf( char[] query, char[] target) {
         int[] lps = nextComputation1(query);
