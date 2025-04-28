@@ -19,6 +19,11 @@ public class Soundex {
         return "%s".formatted(soundx);
     }
 
+
+    //MAPEA UNA PALABRA A SU VALOR SOUNDX. LA CODIFICA, DEJANDO EL PRIMER
+    // CARACTER UNA LETRA, Y LOS OTROS 3 CON SU NUMERO SOUNDX
+    //NO CODIFICA 0 a menos que no haya nada mas.
+
     public static String soundex(String s){
         String s2 = s.toUpperCase();
         char [] IN = s2.toCharArray();
@@ -54,7 +59,7 @@ public class Soundex {
         String s2Soundex = soundex(s1);
 
         double ans=0;
-
+        //POR CADA MATCH DE ENCODING SUMA 0,25
         for(int i=0 ; i<4 ; i++){
             if( sSoundex.charAt(i) == s2Soundex.charAt(i)) {
                 ans+=0.25;

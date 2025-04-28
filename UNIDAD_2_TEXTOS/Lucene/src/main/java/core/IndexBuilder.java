@@ -9,6 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -70,7 +72,7 @@ public class IndexBuilder {
 		// target index directory
 		Directory indexDir = FSDirectory.open( Paths.get(Utils.getPrefixDir() + "/index/"));
 		
-		IndexWriterConfig indexConfig = new IndexWriterConfig(new StandardAnalyzer());
+		IndexWriterConfig indexConfig = new IndexWriterConfig(new SimpleAnalyzer());
 		
 		// create or overwrites an existing one
 		indexConfig.setOpenMode(OpenMode.CREATE);  // other options are available

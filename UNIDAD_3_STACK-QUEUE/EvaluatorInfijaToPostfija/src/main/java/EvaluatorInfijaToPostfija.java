@@ -36,12 +36,13 @@ public class EvaluatorInfijaToPostfija {
 
 	*/
     private static boolean[][] precedenceMatriz= {
-            { true,  true,  false, false, false,  false,  true },
-            { true,  true,  false, false, false,  false,  true },
-            { true,  true,  true,  true,  false,  false,  true  },
-            { true,  true,  true,  true,  false,  false,  true },
-            { true,  true,  true,  true,  false,  false,  true },
-            { false, false, false, false, false,  false,  false },
+            // +      -       *      /      ^       (       )
+            { true,  true,  false, false, false,  false,  true }, // +
+            { true,  true,  false, false, false,  false,  true }, // -
+            { true,  true,  true,  true,  false,  false,  true  }, // *
+            { true,  true,  true,  true,  false,  false,  true }, // /
+            { true,  true,  true,  true,  false,  false,  true }, // ^
+            { false, false, false, false, false,  false,  false }, // (
     };
     private Scanner scannerLine;
 
@@ -173,3 +174,22 @@ public class EvaluatorInfijaToPostfija {
         System.out.println(e.evaluate());
     }
 }
+
+//📋 El procedimiento es:
+//Cada vez que llega un operador nuevo (por ejemplo *, +, ^, etc.):
+//
+//Comparás ese operador nuevo contra el operador que está en el top de la pila usando tu tabla.
+//
+//Mientras la comparación dé true:
+//
+//Hacés pop del operador que está en la pila.
+//
+//Mandás ese operador a la salida.
+//
+//Seguís mirando el siguiente operador que quede en la pila (nuevo top).
+//
+//Cuando la comparación dé false:
+//
+//Te frenás de hacer pop.
+//
+//Apilás el nuevo operador en la pila.

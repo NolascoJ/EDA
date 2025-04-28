@@ -14,6 +14,8 @@ public class Main {
 
         }
 
+
+        //TIME , SPACE : O(N*M)
     public static int levenshtein(String str1 , String str2){
         int [][] mapping = new int[str1.length()+1][str2.length()+1];
         char[] s1=str1.toCharArray();
@@ -52,6 +54,9 @@ public class Main {
         return Math.min(left, Math.min(top,diag));
     }
 
+
+    // TIME = O(N*M)
+    //SPACE = O(min(N,M))
     public static int effLev(String str1 , String str2){
         int len1=str1.length();
         int len2=str2.length();

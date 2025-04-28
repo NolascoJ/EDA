@@ -1,6 +1,7 @@
 package core;
 
 
+import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.search.IndexSearcher;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -42,10 +43,10 @@ public class TheSearcherQueryParser {
 
 
 
-        	String queryStr= "ga";
+			String queryStr ="content:Fly OR content:Moon";
 
         	
-        	QueryParser queryparser = new QueryParser("content", new StandardAnalyzer() );
+        	QueryParser queryparser = new QueryParser("content", new SimpleAnalyzer() );
          	Query query= queryparser.parse(queryStr);
         	
         	// run the query
@@ -89,6 +90,27 @@ public class TheSearcherQueryParser {
             e.printStackTrace();
         }
     }
+
+
+	/*
+	TERM FRECUENCY: CALCULA LA CANTIDAD DE VECES QUE APARECE LA PALABRA EN CADA DOCUEMNTO
+
+	INVERSE DOCUMENT FRECUENCY: 1 + ln(N+1/ (df + 1))
+	N= ctad de docuementos
+	df = ctdad de documentos que tienen el termino
+
+	FORMULA LOCAL = sqrt( TERM FRECUENCY en doc x / ctad TERMS EN DOC x )
+
+	SCORE (DOC , query) = FORMULA LOCAL * IDF. Si el query tiene muchos terms es la suma
+
+
+	IMPORTANTISIMO SI TENGO UN EJ Y CAMBIO LOS TXTS RE INDEXAR. Y SI NO USO LAS COSAS
+
+	GRAN DIFERENCIA ENTRE ESTO Y EL SEARCHER. EN EL SEARCHER TENGO QUE CREAR UN TERMINO (FIELD,QUERYSTR) Y AHI TENGO
+	QUE INVOCAR A LA QUERY CON ESE TERM.
+	ACA PUEDO USAR OTRA NOTACION Y UN STRING LO PARSEA A QUERY CON ALGUN ANALIYZER
+	*\
+	 */
     
 
 }

@@ -40,15 +40,14 @@ public class TheSearcher {
         	
         	// field of interest
         	String fieldName = "content";
-        	String queryStr= "g*e";      //palabra a buscar
+        	String queryStr="fly";      //palabra a buscar
 
-        	Term myTerm = new Term(fieldName, queryStr); //busca este termino. (case sensitive), se hace el query en minuscula, ignora ,
-//        	Q
+        	Term myTerm = new Term(fieldName, queryStr); //busca este termino. (case sensitive), se hace el query en minuscula, ignora ,Q
 //			Query query = new PrefixQuery(myTerm);
 //			Query query = TermRangeQuery.newStringRange(fieldName, "g", "me", false, false);
 //			Query query = new PhraseQuery(fieldName,"game" , "video" , "review");
-//			Query query = new WildcardQuery(myTerm); //queryStr = "g*e" es como game
-			Query query = new FuzzyQuery(myTerm); //se fija si con las distintas operaciones (incluyendo trasposicion) llega a la palabra. Por default 2 ops
+			Query query = new WildcardQuery(myTerm); //queryStr = "g*e" es como game
+//			Query query = new FuzzyQuery(myTerm); //se fija si con las distintas operaciones (incluyendo trasposicion) llega a la palabra. Por default 2 ops
 
         	// run the query
         	long startTime = System.currentTimeMillis();       	

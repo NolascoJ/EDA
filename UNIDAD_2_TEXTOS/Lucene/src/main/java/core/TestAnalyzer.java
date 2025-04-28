@@ -40,7 +40,7 @@ public class TestAnalyzer  {
 //	  	  CharArraySet sw = StopFilter.makeStopSet("de", "y");
 //	      a= new StopAnalyzer(sw);
 	      
-	      a= new SpanishAnalyzer();
+	      a= new SimpleAnalyzer();
 
 		  String fieldValue= "Estructura de datos. Y algoritmos; 2020-Q1  en eda.ita.edu";
 		  
