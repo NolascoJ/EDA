@@ -36,30 +36,68 @@ public class IndexWithDuplicates<E extends Comparable<E> > {
         ++m_size;
     }
 
+    private int getClosestPosition(E key) {
+        int l = 0, r = m_size;
+        while(l < r) {
+            int mid = l + (r - l) / 2;
+            if (m_idx[mid].compareTo(key) >= 0) {
+                r = mid;
+            } else {
+                l = mid+1;
+            }
+        }
+        return l;
+    }
+
+    public int occurrences(E key) {
+        int pos = getClosestPosition(key), count = 0;
+        boolean dif = false;
+        while(!dif && (pos < m_size)){
+            if(!m_idx[pos].equals(key)){
+                dif = true;
+            }else
+                count++;
+            pos++;
+        }
+
+        return count;
+    }
+
     void repeatedValues( E[] values, SimpleLinkedList<E> repeatedLst, SimpleLinkedList<E> singleLst, SimpleLinkedList<E> notIndexedLst )
     {
-        // TODO: completar
+        for(int i=0 ; i<values.length ; i++){
+            int occur = this.occurrences(values[i]);
+            if(occur == 1){
+                singleLst.insert(values[i]);
+            }else if(occur > 1){
+                repeatedLst.insert(values[i]);
+            }else{
+                notIndexedLst.insert(values[i]);
+            }
+        }
+    } //ENTONCES HAGO M VECES,  LOG N COMPARACIONES
+
+
+        public static void main(String[] args) {
+            IndexWithDuplicates<Integer> idx = new IndexWithDuplicates<>();
+            idx.initialize( new Integer[] {100, 50, 30, 50, 80, 10, 100, 30, 20, 138} );
+
+            System.out.println(idx.occurrences(50));
+
+            SimpleLinkedList<Integer> repeatedLst = new SimpleLinkedList();
+            SimpleLinkedList<Integer> singleLst = new SimpleLinkedList();
+            SimpleLinkedList<Integer> notIndexedLst = new SimpleLinkedList();
+
+            idx.repeatedValues( new Integer[] { 100, 70, 40, 120, 33, 80, 10, 50 }, repeatedLst,
+                    singleLst, notIndexedLst );
+
+            System.out.println("Repeated Values");
+            repeatedLst.dump();
+            System.out.println("Single Values");
+            singleLst.dump();
+            System.out.println("Non Indexed Values");
+            notIndexedLst.dump();
+        }
+
+
     }
-
-
-    public static void main(String[] args) {
-        IndexWithDuplicates<Integer> idx = new IndexWithDuplicates<>();
-        idx.initialize(  new Integer[] {100, 50, 30, 50, 80, 10, 100, 30, 20, 138} );
-
-        SimpleLinkedList<Integer> repeatedLst = new SimpleLinkedList();
-        SimpleLinkedList<Integer> singleLst  = new SimpleLinkedList();
-        SimpleLinkedList<Integer> notIndexedLst  = new SimpleLinkedList();
-        idx.repeatedValues( new Integer[] { 100, 70, 40, 120, 33, 80, 10, 50 }, repeatedLst, singleLst, notIndexedLst );
-
-        System.out.println("Repeated Values");
-        repeatedLst.dump();
-
-        System.out.println("Single Values");
-        singleLst.dump();
-
-        System.out.println("Non Indexed Values");
-        notIndexedLst.dump();
-    }
-
-
-}

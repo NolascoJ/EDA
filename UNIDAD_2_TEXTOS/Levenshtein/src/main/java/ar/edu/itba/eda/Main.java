@@ -5,11 +5,17 @@ package ar.edu.itba.eda;
 public class Main {
     public static void main(String[] args) {
 
-        int dist= levenshtein("big data", "bigdaa");
-        int dist2= effLev("big data", "bigdaa");
-        System.out.println(dist);
-        System.out.println(dist2);
-        System.out.println(normalizeLevenshtein("big data", "bigdaa"));
+        String a="EX-AMIGO";
+        String b="EXKUSA";
+
+        int dist= levenshtein(a, b);
+
+
+//        int dist2= effLev("big data", "bigdaa");
+//        System.out.println(dist);
+//        System.out.println(dist2);
+//        System.out.println(normalizeLevenshtein("big data", "bigdaa"));
+//        System.out.println(normalizeLevenshtein(a,b));
 
 
         }
@@ -35,6 +41,12 @@ public class Main {
                         mapping[i-1][j]+1, //eliminacion
                         diagonalCheck(s1[i-1],s2[j-1],mapping[i-1][j-1])); //sustitucion
             }
+        }
+        for(int i=0 ; i<=str1.length() ; i++){
+            for(int j=0 ; j<=str2.length() ; j++){
+                System.out.print(mapping[i][j] + " ");
+            }
+            System.out.print("\n");
         }
         return mapping[str1.length()][str2.length()];
     }
