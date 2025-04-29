@@ -39,16 +39,15 @@ public class TheSearcher {
 
         	
         	// field of interest
-        	String fieldName = "content";
-        	String queryStr="fly";      //palabra a buscar
+			String fieldName = "content"; // Define the field to search within
+			String queryStr = "fly"; // The term to search for
 
-        	Term myTerm = new Term(fieldName, queryStr); //busca este termino. (case sensitive), se hace el query en minuscula, ignora ,Q
-//			Query query = new PrefixQuery(myTerm);
-//			Query query = TermRangeQuery.newStringRange(fieldName, "g", "me", false, false);
-//			Query query = new PhraseQuery(fieldName,"game" , "video" , "review");
-			Query query = new WildcardQuery(myTerm); //queryStr = "g*e" es como game
-//			Query query = new FuzzyQuery(myTerm); //se fija si con las distintas operaciones (incluyendo trasposicion) llega a la palabra. Por default 2 ops
-
+			Term myTerm = new Term(fieldName, queryStr); // Create a Term object for the search
+// 			Query query = new PrefixQuery(myTerm); // Uncomment to use a PrefixQuery (finds terms starting with "fly")
+// 			Query query = TermRangeQuery.newStringRange(fieldName, "g", "me", false, false); // Uncomment to use a TermRangeQuery (finds terms between "g" and "me")
+// 			Query query = new PhraseQuery(fieldName,"game" , "video" , "review"); // Uncomment to use a PhraseQuery (finds the exact phrase "game video review")
+			Query query = new WildcardQuery(myTerm); // Use a WildcardQuery (allows wildcard characters like * and ?)
+// 			Query query = new FuzzyQuery(myTerm); // Uncomment to use a FuzzyQuery (finds terms similar to "fly")
         	// run the query
         	long startTime = System.currentTimeMillis();       	
         	TopDocs topDocs = searcher.search(query, 20);

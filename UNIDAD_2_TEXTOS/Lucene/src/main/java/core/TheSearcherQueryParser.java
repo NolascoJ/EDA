@@ -109,6 +109,25 @@ public class TheSearcherQueryParser {
 	GRAN DIFERENCIA ENTRE ESTO Y EL SEARCHER. EN EL SEARCHER TENGO QUE CREAR UN TERMINO (FIELD,QUERYSTR) Y AHI TENGO
 	QUE INVOCAR A LA QUERY CON ESE TERM.
 	ACA PUEDO USAR OTRA NOTACION Y UN STRING LO PARSEA A QUERY CON ALGUN ANALIYZER
+
+
+
+	// TEOREMA MAESTRO
+		T(N) = a * T(N/b) + C* N^d.
+
+		SI a < b^d -> O(N^d)
+		SI a = b^d -> O(N^d Log(N)
+		SI a > b^d -> O( N ^ (log en base b de a) )            ->  logb(a)
+
+	//USEFUL
+		Arrays.copyOf(arr , start,end)  nlogn
+		Arrays.copyOf(arr) nlogn
+
+	//  String[] words1 = str1.split("\\s+");
+	str.replaceFirst(s2, "") ; cambio la primera aparicion del str2 en str por "vacios"
+
+		String(char [] arr) constructor valido con una rray de chars.
+		puedo usar .concat , .substring...
 	*\
 	 */
     
