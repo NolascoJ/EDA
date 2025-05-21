@@ -23,7 +23,7 @@ public class StringEval {
 
         while (scannerLine.hasNext()) {
             token = scannerLine.next(); //leo hasta el delimitador seteado.
-            if (token.matches("[A-Z]+")) { //matchea palabra, o un punto con mas digitos.
+            if (token.matches("[A-Za-z]+")) { //matchea palabra, o un punto con mas digitos.
                 auxi.push(token);
                 System.out.println("Stack after push: " + auxi);
             } else if (token.matches("[+\\-*/^]")) {

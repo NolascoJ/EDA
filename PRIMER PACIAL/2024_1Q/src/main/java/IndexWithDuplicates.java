@@ -55,9 +55,6 @@ public class IndexWithDuplicates  {
                 toReturn[i++] = other.indexedData[ptr2++];
             }
         }
-        System.out.println(i);
-        System.out.println(ptr1);
-        System.out.println(ptr2);
         if(ptr1 == cantElems){
             while(ptr2 < other.cantElems){
                 toReturn[i++] = other.indexedData[ptr2++];

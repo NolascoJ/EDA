@@ -29,7 +29,7 @@ public class ProximityIndex {
         boolean found = false;
 
         for(int i=0 ; i<size && !found ; i++){
-            if(elements[i] == element) {
+            if(elements[i] == element) { //seteo el i en donde esta el wachin
                 found = true;
                 iter = i;
             }

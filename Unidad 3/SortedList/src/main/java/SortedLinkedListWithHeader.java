@@ -287,7 +287,6 @@ public class SortedLinkedListWithHeader<T extends Comparable<? super T>> impleme
         private Node prev;
         private Node toDel;
 
-        private Stack<Node> stack;
 
         SortedLinkedListIterator() {
             iter = header.first;

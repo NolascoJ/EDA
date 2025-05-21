@@ -70,8 +70,8 @@ public class Lista{
             first = elem;
             last = elem;
         } else {
-            last.next = elem;
-            last = elem;
+            last.next = elem; //inserto al final;
+            last = elem; //acutalizo el last.
         }
     }
 

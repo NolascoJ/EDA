@@ -41,12 +41,17 @@ public class TheSearcherQueryParser {
         	searcher.setSimilarity(new ClassicSimilarity());
 
 
+			//ontent:IEDO~: This part performs a fuzzy search for the term "IEDO" within the content field. The ~ symbol indicates a fuzzy query, which means it will find terms similar to "IEDO" based on Levenshtein distance (edit distance).
+			//AND: This is a boolean operator that requires both parts of the query to match.
+			//content:[PI TO SOS]: This part performs a range query within the content field. It searches for terms that fall alphabetically between "PI" and "SOS", inclusive.
+			//In summary, the query searches for documents where the content field contains
+			//
 
 
-			String queryStr ="content:Fly OR content:Moon";
+			String queryStr ="content:IEDO~ AND content:[PI TO SOS] "  ;
 
-        	
-        	QueryParser queryparser = new QueryParser("content", new SimpleAnalyzer() );
+
+			QueryParser queryparser = new QueryParser("content", new StandardAnalyzer() );
          	Query query= queryparser.parse(queryStr);
         	
         	// run the query
@@ -128,7 +133,13 @@ public class TheSearcherQueryParser {
 
 		String(char [] arr) constructor valido con una rray de chars.
 		puedo usar .concat , .substring...
-	*\
+
+					n
+	SUMA GAUSS ->  SUM i = n(n+1) * 1/2;
+	*\				i=0
+
+
+
 	 */
     
 

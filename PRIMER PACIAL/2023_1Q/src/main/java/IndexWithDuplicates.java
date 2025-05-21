@@ -55,11 +55,11 @@ public class IndexWithDuplicates<E extends Comparable<E> > {
         while(!dif && (pos < m_size)){
             if(!m_idx[pos].equals(key)){
                 dif = true;
-            }else
+            }else {
                 count++;
-            pos++;
+                pos++;
+            }
         }
-
         return count;
     }
 

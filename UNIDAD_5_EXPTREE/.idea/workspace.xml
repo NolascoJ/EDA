@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2cbca33a-1dd0-4494-a164-b31ad522c64d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../UNIDAD_5_BST/bst/src/main/java/BSTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UNIDAD_5_BST/bst/src/main/java/BSTreeInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UNIDAD_5_BST/bst/src/main/java/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UNIDAD_5_BST/bst/src/main/java/NodeTreeInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UNIDAD_5_BST/bst/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PRIMER PACIAL/2022_1Q/src/main/java/ProximityIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRIMER PACIAL/2022_1Q/src/main/java/ProximityIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PRIMER PACIAL/2022_2Q/src/main/java/StringEval.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRIMER PACIAL/2022_2Q/src/main/java/StringEval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PRIMER PACIAL/2023_1Q/src/main/java/IndexWithDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRIMER PACIAL/2023_1Q/src/main/java/IndexWithDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PRIMER PACIAL/2024_1Q/src/main/java/IndexWithDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRIMER PACIAL/2024_1Q/src/main/java/IndexWithDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PRIMER PACIAL/2024_1Q/src/main/java/Lista.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PRIMER PACIAL/2024_1Q/src/main/java/Lista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/b.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/c.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/c.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/d.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/d.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/docs/e..txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/index/_6.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/index/_6.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/index/_6.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/index/segments_7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/out/production/Lucene/core/IndexBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/out/production/Lucene/core/IndexBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/out/production/Lucene/core/TheSearcherQueryParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/out/production/Lucene/core/TheSearcherQueryParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/src/main/java/core/IndexBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/src/main/java/core/IndexBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/src/main/java/core/TheSearcherQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UNIDAD_2_TEXTOS/Lucene/src/main/java/core/TheSearcherQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unidad 3/SortedList/src/main/java/SortedLinkedListWithHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Unidad 3/SortedList/src/main/java/SortedLinkedListWithHeader.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2g5nOeyHqzABG5GZUhm0EGv1S9L" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/54223/ITBA/2A_2Q/EDA/UNIDAD_5_EXPTREE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cbca33a-1dd0-4494-a164-b31ad522c64d" name="Changes" comment="" />
+      <created>1714996275978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714996275978</updated>
+      <workItem from="1714996277220" duration="515000" />
+      <workItem from="1714996881725" duration="6589000" />
+      <workItem from="1715599507616" duration="6000" />
+      <workItem from="1715601257057" duration="1447000" />
+      <workItem from="1718490252254" duration="1809000" />
+      <workItem from="1747749695566" duration="148000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
